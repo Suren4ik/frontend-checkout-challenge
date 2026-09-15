@@ -22,7 +22,11 @@
     "smoke": "node scripts/smoke.mjs",
     "data:reset": "node scripts/reset.mjs",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev:web": "npm run build -w @checkout/contracts && npm run dev -w @checkout/web",
+    "build:web": "npm run build -w @checkout/contracts && npm run build -w @checkout/web",
+    "test:web": "npm run build -w @checkout/contracts && npm run test -w @checkout/web",
+    "preview:web": "npm run preview -w @checkout/web"
   },
   "devDependencies": {
     "@apidevtools/swagger-parser": "13.0.0",
